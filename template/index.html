@@ -9,7 +9,12 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Pacifico&display=swap" rel="stylesheet">
 
-    <title>Document</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <title>Natural basket</title> 
+    <link rel="icon" href="./../resources/images/icon.png" type="image/x-icon" />
 
     <style>
 
@@ -19,20 +24,151 @@
         box-sizing: border-box;
     }
 
+    body
+    {
+        height: 100vh;
+        background: linear-gradient(to bottom right, #fcc419, #f08c00);
+    }
 
-body{
-    height: 100vh;
-    background: linear-gradient(to bottom right, #fcc419, #f08c00);
-}
+    .card{
+        width:auto; 
+        height:80px; 
+        /* background-color: beige; */
+        background: linear-gradient(to bottom left, #fac629, #e6921d);
+        /* border: 1px solid #f08c00; */
 
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
 
+        clip-path: polygon(0,0 100% 0, 50% 75%, 0 100%); 
+        transform: skewX(-20deg);
+        border: 2px solid #f08c00c8;
+        box-shadow: 5px 5px 20px #f08c00;
+
+    }
+
+    .card-details{
+        font-size: 32px;
+        font-family: 'Roboto', sans-serif;
+        color: #fff;  
+
+    }
+    .white{
+        background-color: #f1f3f5;
+    }
+    .card-logo{
+        /* transform:skewX(20deg); */
+        font-family: sans-serif;
+        color: #f1f3f5;
+        background-color: #f1f3f5;
+        padding:20px auto;
+        
+    }
+    .fix-skewX{
+        transform: skewX(20deg);
+        margin-top: -4px;
+        font-size: 60px;
+    }
+
+    .fix-single-skewX{
+        transform: skewX(20deg);
+        padding: 23px 20px;
+        
+       
+    }
+
+    .dark-text{
+        color:#777;
+        
+    }
+    
+    .left-right-border{
+        /* transform: skewX(-20deg); */
+        border-left: 2px solid#e6921d ;
+        border-right: 2px solid#e6921d ;
+    }
+
+    .small-text{
+        font-size: 24px;
+    }
+    .details{
+        transform: skewX(20deg);
+        margin-right: 30px;
+        text-transform: uppercase;
+    }
+
+    .card:hover{
+        transform: skewX(-20deg) scale(1.08);
+        transition: all 0.5s;
+    }
+
+    .links{
+        text-decoration: none;
+        color:#f1f3f5;  
+    }
 
     </style>
 </head>
 <body>
-    <header style="display: flex; justify-content: space-around; width:950px; margin:0 auto; ">
-        <h1  style= "display: inline; border: 1px solid #f08c00; border-radius: 100px; font-family: Kaushan Script; font-size: 48px; color:#fff;text-shadow: 5px 5px 5px #c9811b;  text-transform: uppercase; text-align: center;  transform: rotate(-2deg); margin-top:24px ">🍎 natural basket 🍍</h1>  
+    <header style="display: flex; 
+    flex-direction:column; 
+    justify-content: space-around; 
+    align-items: center; 
+    width:990px; 
+    margin:0 auto;">
+    
+        <h1 style= " padding:3px; background: linear-gradient(to right bottom, #fcc419, #f08c00); display: block; width:300px; border: 2px solid #f08c00c8; border-radius: 100px; font-family: Kaushan Script; font-size: 46px; color:#ffffff;text-shadow: 5px 5px 5px #f08c00;  text-transform: uppercase; text-align: center; box-shadow: 5px 5px 20px #f08c00; transform: rotate(-2deg); margin-top:24px ">🍍natural basket🍋</h1>  
+        <div style="text-align:center; 
+        color:#fff; 
+        text-transform: uppercase; 
+        font-weight: 700; 
+        font-family: Kaushan Script;
+         border-radius: 24px; 
+         margin-top: -8px; 
+         margin-left: 52px; 
+         z-index: 10">One True King</div>
     </header>
+
+    <section style="width:950px; margin:0 auto; margin-top:110px">
+        <div style="display:flex; flex-direction: column; gap:35px">
+
+            <div class="card">
+                <div class="card-details card-logo"> <div class="fix-skewX">🍏</div></div>
+                <div class="card-details fix-single-skewX "> green Apple</div>
+                <div class="card-details card-logo left-right-border"> <div class="fix-single-skewX dark-text small-text">12 🍏 per 📦</div> </div>
+                <div class="card-details card-logo left-right-border"> <div class="fix-single-skewX dark-text small-text">$ 5.00</div></div>
+                <div class="card-details details "> <a class="links" href="#">Details</a></div>
+            </div>
+            <div class="card">
+                <div class="card-details card-logo"> <div class="fix-skewX">🍍</div></div>
+                <div class="card-details fix-single-skewX "> Pinapple</div>
+                <div class="card-details card-logo left-right-border"> <div class="fix-single-skewX dark-text small-text">8 🍍 per 📦</div></div>
+                <div class="card-details card-logo left-right-border"> <div class="fix-single-skewX dark-text small-text">$ 5.00</div></div>
+                <div class="card-details details "> <a class="links" href="#">Details</a></div>
+            </div>
+            <div class="card">
+                <div class="card-details card-logo"> <div class="fix-skewX">🍉</div></div>
+                <div class="card-details fix-single-skewX "> watermelon</div>
+                <div class="card-details card-logo left-right-border"> <div class="fix-single-skewX dark-text small-text">6 🍉 per 📦</div></div>
+                <div class="card-details card-logo left-right-border"> <div class="fix-single-skewX dark-text small-text">$ 5.00</div></div>
+                <div class="card-details details "> <a class="links" href="#">Details</a></div>
+            </div>
+            <div class="card">
+                <div class="card-details card-logo"> <div class="fix-skewX">🍊</div></div>
+                <div class="card-details fix-single-skewX "> orange</div>
+                <div class="card-details card-logo left-right-border"> <div class="fix-single-skewX dark-text small-text">16 🍊 per 📦</div></div>
+                <div class="card-details card-logo left-right-border"> <div class="fix-single-skewX dark-text small-text">$ 5.00</div></div>
+                <div class="card-details details "> <a class="links" href="#">Details</a></div>
+            </div>
+
+
+
+        </div>
+
+
+        
+    </section>
     
 </body>
 </html>
