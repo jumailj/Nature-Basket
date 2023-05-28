@@ -1,0 +1,20 @@
+{
+  "name": "nature-basket",
+  "version": "1.0.0",
+  "description": "small project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jumailj/Nature-Basket.git"
+  },
+  "author": "jumail",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jumailj/Nature-Basket/issues"
+  },
+  "homepage": "https://github.com/jumailj/Nature-Basket#readme"
+}
