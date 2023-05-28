@@ -1,24 +1,25 @@
 const fs= require('fs');
 const http = require('http');
 
+const templater = require(`${__dirname}/templater`);
+
 
 let overviewpage= fs.readFileSync(`${__dirname}/template/template-overview.html`, 'utf-8');
-let productCard = fs.readFileSync(`${__dirname}/template/template-card.html`, 'utf-8');
+let productCardTemplate = fs.readFileSync(`${__dirname}/template/template-card.html`, 'utf-8');
 let fruits = JSON.parse( fs.readFileSync(`${__dirname}/data/fruit-data.json`));
-let prodcutCards = '';
-console.log(fruits);
 
 
-productCard = productCard.replace(/<%FRUIT_EMOJI%>/mg, fruits[0].emoji); 
-productCard = productCard.replace(`<%FRUIT_NAME%>`, fruits[0].fruitName);
-productCard = productCard.replace(`<%NO_OF_FRUIT%>`, fruits[0].noOfFruit);
-productCard = productCard.replace(`<%RATE_OF_FRUIT%>`, fruits[0].rateOfFruit);
+let card = '';
+let finalcard = '';
 
-prodcutCards+= productCard;
-
+fruits.map(element=>{
+    // console.log(element);
+    card = templater(productCardTemplate, element);
+    finalcard += card;
+});
 
 //console.log(productCard);
-overviewpage = overviewpage.replace(`<%PRODUCTS%>`, prodcutCards)
+overviewpage = overviewpage.replace(`<%PRODUCTS%>`, finalcard)
 
 const server= http.createServer((req,res)=>{
 
