@@ -4,7 +4,7 @@
         "emoji": "🍉",
         "fruitName": "Watermelon",
         "noOfFruit": 12,
-        "rateOfFruit": 15
+        "rateOfFruit": 99
     },
 
     {
@@ -12,21 +12,21 @@
         "emoji": "🍊",
         "fruitName": "Orange",
         "noOfFruit": 10,
-        "rateOfFruit": 12
+        "rateOfFruit": 99
     },
     {
         "id": 2,
         "emoji": "🍍",
         "fruitName": "Pinapple",
         "noOfFruit": 8,
-        "rateOfFruit": 13
+        "rateOfFruit": 99
     },
     {
         "id": 3,
         "emoji": "🍋",
         "fruitName": "Lemon",
         "noOfFruit": 12,
-        "rateOfFruit": 10
+        "rateOfFruit": 99
     }
 
 ]
